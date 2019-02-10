@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form>
+        <form action="/verified" method ="POST">
             <h1><strong>Signup</strong></h1>
-            Username
-            <input name="username" maxlength="12" required autofocus placeholder="Enter a username"/><br>
-            Password
-            <input name="pw" type="password" maxlength="20" placeholder="Enter a password" required/><br>
-            Verify Password
-            <input name="pw_ver" type="password" maxlength="20" placeholder="Must match exactly" required/><br>
-            Email (optional)
-            <input name="email" type="email" placeholder="Enter your email"/><br>
+            <label for="user_name">Username</label>
+            <input id="user_name" name="username" maxlength="12" required autofocus placeholder="Enter a username"/><br>
+            <label for="pass">Password</label>
+            <input id="pass" name="pw" type="password" maxlength="20" placeholder="Enter a password" required/><br>
+            <label for="verify">Verify Password</label>
+            <input id="verify" name="pw_ver" type="password" maxlength="20" placeholder="Must match exactly" required/><br>
+            <label for="optional">Email (optional)</label>
+            <input id="optional" name="email" type="email" placeholder="Enter your email"/><br>
             <input name="submit" type="submit" value="Sign me up!"/>
         </form>
     </body>
