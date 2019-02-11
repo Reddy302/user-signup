@@ -72,10 +72,10 @@ def verified():
             at += 1
         if char == '.':
             dot += 1
-        if at != 1 or dot != 1:
-            password = ''
-            verification = ''
-            email_error = "Invalid email format."
+    if at != 1 or dot != 1:
+        password = ''
+        verification = ''
+        email_error = "Invalid email format."
         
     if not user_error and not password_error and not verify_error and not email_error:
         return redirect('/welcome?user={0}'.format(user))
