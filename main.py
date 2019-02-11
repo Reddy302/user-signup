@@ -29,10 +29,14 @@ def verified():
     email_error = ''
 
     if len(user) < 3 or len(user) > 20:
+        password = ''
+        verification = ''
         user_error = 'Usernames must be between 3 and 20 characters.'
 
     for char in user:
         if char == ' ':
+            password = ''
+            verification = ''
             user_error = 'Usernames cannot include spaces.'
     
     if len(password) < 3 or len(password) > 20:
@@ -55,6 +59,8 @@ def verified():
         email_error = ''
     else:
         if len(email) < 3 or len(email) > 20:
+            password = ''
+            verification = ''
             email_error = 'Email addresses must be between 3 and 20 characters.'
 
     at = 0
@@ -67,6 +73,8 @@ def verified():
         if char == '.':
             dot += 1
         if at > 1 or dot > 1:
+            password = ''
+            verification = ''
             email_error = "Invalid email format."
         
     if not user_error and not password_error and not verify_error and not email_error:
