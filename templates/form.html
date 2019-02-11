@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            .error { color: red; }
+        </style>
+    </head>
     <body>
-    <style>
-        .error {{ color: red; }}
-    </style>
-        <form action="/verified" method ="POST">
-            <h1><strong>Signup</strong></h1>
-            <label for="user_name">Username</label>
-                <input id="user_name" name="username" maxlength="12" required autofocus placeholder="Enter a username" value='{user}'/><br>
-            <p class="error">{user_error}</p>
-            <label for="pass">Password</label>
-                <input id="pass" name="pw" type="password" maxlength="20" placeholder="Enter a password" required value='{password}'/><br>
-            <p class="error">{password_error}</p>
-            <label for="verify">Verify Password</label>
-                <input id="verify" name="pw_ver" type="password" maxlength="20" placeholder="Must match exactly" required value='{verification}'/><br>
-            <p class="error">{verify_error}</p>
-            <label for="optional">Email (optional)</label>
-                <input id="optional" name="email" type="email" placeholder="Enter your email" value='{email}'/><br>
-            <p class="error">{email_error}</p>
-            <input name="submit" type="submit" value="Sign me up!"/>
+        <h1>Signup</h1>
+        <form method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="user_name">Username</label>
+                        </td>
+                        <td>
+                            <input id="user_name" name="user" type="text" value='{{user}}' style="display:inline" required autofocus placeholder="Enter a username"/>
+                            <span class="error">{{user_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass">Password</label>
+                        </td>
+                        <td>
+                            <input id="pass" name="pw" type="password" value='{{password}}' placeholder="Enter a password"  required/>
+                            <span class="error">{{password_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="verify">Verify Password</label>
+                        </td>
+                        <td>
+                            <input id="verify" name="pw_ver" type="password" value='{{verification}}' placeholder="Must match exactly" required/>
+                            <span class="error">{{verify_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="optional">Email (optional)</label>
+                        </td>
+                        <td>
+                            <input id="optional" name="email" type="text" value='{{email}}' placeholder="Enter your email"/>
+                            <span class="error">{{email_error}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input name="submit" type="submit" value='Sign me up!'/>
         </form>
     </body>
 </html>
