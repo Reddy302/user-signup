@@ -72,7 +72,7 @@ def verified():
             at += 1
         if char == '.':
             dot += 1
-        if at > 1 or dot > 1:
+        if at != 1 or dot != 1:
             password = ''
             verification = ''
             email_error = "Invalid email format."
